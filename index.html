@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Llista d'activitats</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+  <header>
+    <h2>LLISTA ACTIVITATS</h2>
+    <nav class="navbarPare" id="menuPrincipal">
+      <h3>Menú</h3>
+      <ul>
+        <li><a href="">Llista d'activitats</a></li>
+        <li><a href="">Crear Tasca</a></li>
+        <li><a href="">Gestió de categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="Principal">
+
+    <section class="seccioTitolPrincipal">
+      <h2>Llistat d'Activitats</h2>
+    </section>
+
+    <!--Zona importació amb js-->
+    <section class="seccioAccionsPare">
+      <div class="seccioCrearTasca">
+        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'">Crea Tasca</button>
+      </div>
+
+      <div class="seccioImpJson">
+        <label for="inputJson"></label>
+        <input type="text" id="inputTasca" placeholder="">
+        <button class="botoArxiuPujar">Pujar</button>
+      </div>
+    </section>
+
+    <!--Llista dinàmica per tasques pendents-->
+
+    <section class="seccioPendentsPare">
+      <h3>TASQUES PENDENTS</h3>
+      <div id="llistaPendents"></div>
+
+
+      <section class="seccioAcabatsPare">
+        <h3>TASQUES ACABADES</h3>
+        <div id="llistaAcabades"></div>
+
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+          const ctx = document.getElementById('myChart')
+
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['Jenuary', 'February', 'March', 'April','May', 'June','July','August', 'Setembre','October', 'November', 'December'],
+
+              datasets: [{
+                label: 'Completades',
+                data: [],
+                borderWidth: 2
+              }]
+              
+            },
+              }
+            
+          );
+        </script>
+      </section>
+
+</body>
+
+</html>
