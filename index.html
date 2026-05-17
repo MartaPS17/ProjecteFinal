@@ -16,7 +16,7 @@
       <h3>Menú</h3>
       <ul>
         <li><a href="">Llista d'activitats</a></li>
-        <li><a href="">Crear Tasca</a></li>
+        <li><a href="crear-tasca.html">Crear Tasca</a></li>
         <li><a href="">Gestió de categories</a></li>
       </ul>
     </nav>
@@ -31,7 +31,7 @@
     <!--Zona importació amb js-->
     <section class="seccioAccionsPare">
       <div class="seccioCrearTasca">
-        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'">Crea Tasca</button>
+        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'"><a href="crear-tasca.html">Crea Tasca</a></button>
       </div>
 
       <div class="seccioImpJson">
@@ -46,11 +46,21 @@
     <section class="seccioPendentsPare">
       <h3>TASQUES PENDENTS</h3>
       <div id="llistaPendents"></div>
+      <table id="pendent">
+      <tbody>
+
+      </tbody>
+      </table>
 
 
       <section class="seccioAcabatsPare">
         <h3>TASQUES ACABADES</h3>
         <div id="llistaAcabades"></div>
+        <table id="acabat">
+      <tbody>
+
+      </tbody>
+      </table>
 
         <div>
           <canvas id="myChart"></canvas>
