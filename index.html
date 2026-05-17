@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Llista d'activitats</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <section class="seccioTitol">
+    <h2>LLISTA ACTIVITATS</h2>
+  </section>  
 
   <header>
-    <h2>LLISTA ACTIVITATS</h2>
     <nav class="navbarPare" id="menuPrincipal">
       <h3>Menú</h3>
       <ul>
@@ -31,11 +33,11 @@
     <!--Zona importació amb js-->
     <section class="seccioAccionsPare">
       <div class="seccioCrearTasca">
-        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'"><a href="crear-tasca.html">Crea Tasca</a></button>
+        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'"></button>
       </div>
 
       <div class="seccioImpJson">
-        <label for="inputJson"></label>
+        <label for="inputTasca"></label>
         <input type="text" id="inputTasca" placeholder="">
         <button class="botoArxiuPujar">Pujar</button>
       </div>
@@ -51,6 +53,7 @@
 
       </tbody>
       </table>
+      </section>
 
 
       <section class="seccioAcabatsPare">

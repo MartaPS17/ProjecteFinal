@@ -1,0 +1,53 @@
+/*Variables*/
+:root {
+  --color-principal: #619cd6;
+  --tamany-h3: 40px;
+  --tamany-h2:20px;
+  --tamany-lletra-normal: 18px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclou farcit i vora dins de les dimensions [2] */
+}
+
+body {
+  display: flex; /* Activa el Flexbox horitzontal [4] */
+  min-height: 100vh;
+}
+
+
+.seccioTitol{
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--tamany-h2);
+  margin-right: 8em; 
+}
+
+header {
+  display:block;
+  font-size:var(--tamany-lletraNormal);
+  
+}
+
+.navbarPare {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  background-color: var(--color-principal);
+  font-size: var(--tamany-lletra-normal);
+  min-height: 100vh;
+
+
+}
+
+.navbarPare ul{
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  font-size: var(--tamany-lletra-normal);
+}
