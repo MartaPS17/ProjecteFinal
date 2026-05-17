@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Tasca</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <header>
+    <h2>CREAR TASCA</h2>
+    <nav class="navbarPare" id="menuPrincipal">
+      <h3>Menú</h3>
+      <ul>
+        <li><a href="index.html">Llista d'activitats</a></li>
+        <li><a href="crear-tasca.html">Crear Tasca</a></li>
+        <li><a href="categories.html">Gestió de categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="seccioTasca">
+      <form id="formTasca" action="#">
+        <div class="seccioFormTitol">
+          <h3>Crear nova tasca</h3>
+        </div>
+
+        <div class="seccioFormTasca">
+          <label for="titol">Titol</label>
+          <input type="text" name="titol" placeholder="Nom de la tasca" required>
+          <label for="desc">Descripció:</label>
+          <input type="text" name="desc" placeholder="" required>
+
+          <label for="data">Data:</label>
+          <input type="date" name="data" required>
+
+          <label for="categories">Tria la categoria...</label>
+          <select name="categories" id="categories" required></select>
+          <option value="" disabled selected>Categories</option> <!--s'HAN DE CARREGAR AMB JS/DOM-->
+          </select>
+
+          <label for="prioritat">Prioritat</label>
+          <select name="prioritat" id="prioritat" required>
+            <option value="Baixa">Baixa</option>
+            <option value="Alta">Alta</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+
+          <button type="submit" class="btnCrearTasca">Crear Tasca</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+
+</html>
