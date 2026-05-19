@@ -108,6 +108,9 @@ button:hover{
 }
 
 .script{
-order:1;
+flex-grow:1;
 margin-top: 2em;
+width:fit-content;
+height: 30em;
+max-width: 20em;
 }
