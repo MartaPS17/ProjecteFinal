@@ -133,3 +133,20 @@ button:hover {
   background-color: var(--color-fondo-secundari);
   font-size: var(--tamany-lletra-normal);
 }
+
+/*CSS CATEGORIA*/
+
+.sectionFormCategories{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  padding: 2em;
+  background-color: var(--color-fondo-secundari);
+  font-size: var(--tamany-lletra-normal);
+  min-height: 20vh;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 2em;
+  box-shadow: 0.5em 0.5em 1em rgb(145, 151, 158) ;
+}
+
