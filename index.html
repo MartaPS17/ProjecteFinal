@@ -8,90 +8,82 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-  <section class="seccioTitol">
-    <h2>LLISTA ACTIVITATS</h2>
-  </section>  
 
   <header>
-    <nav class="navbarPare" id="menuPrincipal">
-      <h3>Menú</h3>
-      <ul>
-        <li><a href="index.html">Llista d'activitats</a></li>
-        <li><a href="crear-tasca.html">Crear Tasca</a></li>
-        <li><a href="categories.html">Gestió de categories</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbarPare" id="menuPrincipal">
+    <h3>Menú</h3>
+    <ul>
+      <li><a href="index.html">Llista d'activitats</a></li>
+      <li><a href="crear-tasca.html">Crear Tasca</a></li>
+      <li><a href="categories.html">Gestió de categories</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main class="Principal">
+  <main class="principal">
+  <section class="seccioTitolPrincipal">
+    <h2>Llistat d'Activitats</h2>
+  </section>
 
-    <section class="seccioTitolPrincipal">
-      <h2>Llistat d'Activitats</h2>
-    </section>
+  <section class="seccioAccionsPare">
+    <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'">Crea Tasca</button>
+    <div class="seccioImpJson">
+      <label for="inputTasca">Cerca JSON:</label>
+      <input type="text" id="inputTasca" placeholder="activitats.json">
+      <button class="botoArxiuPujar">Pujar</button>
+    </div>
+  </section>
 
-    <!--Zona importació amb js-->
-    <section class="seccioAccionsPare">
-      <div class="seccioCrearTasca">
-        <button class="novaTascaBoto" onclick="location.href ='crear-tasca.html'"></button>
-      </div>
 
-      <div class="seccioImpJson">
-        <label for="inputTasca"></label>
-        <input type="text" id="inputTasca" placeholder="">
-        <button class="botoArxiuPujar">Pujar</button>
-      </div>
-    </section>
 
     <!--Llista dinàmica per tasques pendents-->
 
     <section class="seccioPendentsPare">
-      <h3>TASQUES PENDENTS</h3>
-      <div id="llistaPendents"></div>
-      <table id="pendent">
-      <tbody>
+    <h3>TASQUES PENDENTS</h3>
+    <table id="pendent">
+      <thead><tr><th></th><th></th></tr></thead>
+      <tbody id="llistaPendents"></tbody>
+    </table>
+  </section>
 
-      </tbody>
+
+     <section class="seccioAcabadesPare">
+      <h3>TASQUES ACABADES</h3>
+      <table id="acabat">
+        <tbody id="llistaAcabades"></tbody>
       </table>
-      </section>
+      
+      <div class="grafic-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </section>
 
+  </main> 
 
-      <section class="seccioAcabatsPare">
-        <h3>TASQUES ACABADES</h3>
-        <div id="llistaAcabades"></div>
-        <table id="acabat">
-      <tbody>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    // És millor moure això a un fitxer js/main.js
+    const ctx = document.getElementById('myChart');
 
-      </tbody>
-      </table>
-
-        <div>
-          <canvas id="myChart"></canvas>
-        </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-        <script>
-          const ctx = document.getElementById('myChart')
-
-          new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: ['Jenuary', 'February', 'March', 'April','May', 'June','July','August', 'Setembre','October', 'November', 'December'],
-
-              datasets: [{
-                label: 'Completades',
-                data: [],
-                borderWidth: 2
-              }]
-              
-            },
-              }
-            
-          );
-        </script>
-      </section>
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          
+          labels: ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny', 'Juliol', 'Agost', 'Setembre', 'Octubre', 'Novembre', 'Desembre'],
+          datasets: [{
+            label: 'Completades',
+            data: [], // comptadors de JS
+            borderWidth: 2
+          }]
+        }
+      });
+    }
+  </script>
 
 </body>
-
 </html>
