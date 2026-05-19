@@ -2,25 +2,30 @@
 :root {
   --color-principal: #619cd6;
   --color-fondo: rgb(225, 228, 232);
-  --color-fondo-secundari:rgb(247, 253, 253);
-  --color-click:rgb(138, 204, 138);
+  --color-fondo-secundari: rgb(247, 253, 253);
+  --color-click: rgb(138, 204, 138);
   --tamany-h3: 40px;
   --tamany-h2: 20px;
   --tamany-lletra-normal: 18px;
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   display: flex;
   background-color: var(--color-fondo);
-
 }
 
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 header {
   display: block;
@@ -41,19 +46,19 @@ header {
   font-size: var(--tamany-lletra-normal);
 }
 
-.seccioTitolPrincipal{
+.seccioTitolPrincipal {
   align-self: center;
 }
 
 .navbarPare li a {
-  text-decoration: none; 
+  text-decoration: none;
   color: black;
   display: block;
   padding: 10px 0;
 }
 
 .principal {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -61,24 +66,21 @@ header {
 
 /*Botons*/
 
-button{
+button {
   background-color: var(--color-principal);
   padding: 0.7em;
   margin: 0.5em;
   border-radius: 1em;
 }
 
-button:hover{
+button:hover {
   background-color: var(--color-click);
   cursor: pointer;
 }
 
-
-
-
 /*Seccio accions pare*/
 
-.seccioAccionsPare{
+.seccioAccionsPare {
   display: inline-flex;
   justify-content: space-between;
   margin-top: 2em;
@@ -86,31 +88,48 @@ button:hover{
   background-color: var(--color-fondo-secundari);
   padding: 1em;
   border-radius: 1em;
-
-  
 }
 
 /*Secció pendents*/
 
-.seccioPendentsPare{
+.seccioPendentsPare {
   display: flex;
   margin-bottom: 3em;
 }
 
 /*Seccio acabades*/
 
-.seccioAcabadesPare{
+.seccioAcabadesPare {
   display: flex;
   flex-direction: column;
   margin-bottom: 2em;
-
-
+}
+.script {
+  flex-grow: 1;
+  margin-top: 2em;
+  width: fit-content;
+  height: 30em;
+  max-width: 20em;
 }
 
-.script{
-flex-grow:1;
-margin-top: 2em;
-width:fit-content;
-height: 30em;
-max-width: 20em;
+/*CSS CREAR TASCA*/
+
+.seccioFormTasca {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  line-height: 2em;
+}
+
+.seccioFormTitol {
+  font-size: var(--tamany-h2);
+  padding: 2em;
+}
+
+.seccioTasca {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-fondo-secundari);
+  font-size: var(--tamany-lletra-normal);
 }
