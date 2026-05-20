@@ -1,0 +1,3 @@
+let llistaTasques = [];
+
+llistaTasques.getI
