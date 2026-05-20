@@ -1,53 +1,53 @@
-const tascaKey = 'dataTasca';
-const categoriaKey = 'dataCategoria';
+const TASCA_KEY = 'dataTasca';
+const LLISTA_TASQUES_KEY = 'llistaTasques';
+const CATEGORIA_KEY = 'dataCategoria';
+const LLISTA_CATEGORIES_KEY = 'llistaCategories';
 
-
+/*Gestió tasques*/ 
 
 function guardarTasca(tasca){
   const tascaJSON = JSON.stringify(tasca);
-  localStorage.setItem('tascaActual', tascaJSON);
+  localStorage.setItem(TASCA_KEY, JSON.stringify(tasca));
   
 }
 
 function getTasca() {
-  const dades = localStorage.getItem(tascaKey);
+  const dades = localStorage.getItem(TASCA_KEY);
   return dades ? JSON.parse(dades) : null;
 }
 
 //Recuperar llista
 
-function getLlista(){
-  const dades = localStorage.getItem();
-  return dades ? JSON.parse(dades) : [];
+function guardarLlistaTasques(llista){
+  localStorage.setItem(LLISTA_TASQUES_KEY, JSON.stringify(llista));
+
 }
 
-function guardarLlista(llista){
-  const dadesText = JSON.stringify(llista);
-  localStorage.setItem('tasques', dadesText);
-
+function getLlistaTasca(){
+  const dades = localStorage.getItem(LLISTA_TASQUES_KEY);
+  return dades ? JSON.parse(dades) : [];
 }
 
 /*CATEGORIES*/
 
 function guardarCategoria(Categoria){
   const categoriaJSON = JSON.stringify(Categoria);
-  localStorage.setItem('categoriaNova', categoriaJSON);
+  localStorage.setItem(CATEGORIA_KEY, JSON.stringify(Categoria));
 }
 
 
 function getCategoria(){
-  const dataCategoria = localStorage.getItem('categoriaNova');
+  const dataCategoria = localStorage.getItem(CATEGORIA_KEY);
   return dades ? JSON.parse(dades) : null;
 }
-
-//Llista categories. Guardar i recuperar
+//Llista categories. 
 
 function getLlistaCategoria(){
-  const dades = localStorage.getItem('llistaCategories');
+  const dades = localStorage.getItem(LLISTA_CATEGORIES_KEY);
   return dades ? JSON.parse(dades) : [null];
 }
 
 function guardarLlista(llista){
   const dadesLlista = JSON.stringify(llista);
-  localStorage.setItem('llistaCategories', dadesLlista);
+  localStorage.setItem(LLISTA_CATEGORIES_KEY, dadesLlista);
 }
