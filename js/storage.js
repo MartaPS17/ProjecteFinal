@@ -6,7 +6,6 @@ const LLISTA_CATEGORIES_KEY = 'llistaCategories';
 /*Gestió tasques*/ 
 
 function guardarTasca(tasca){
-  const tascaJSON = JSON.stringify(tasca);
   localStorage.setItem(TASCA_KEY, JSON.stringify(tasca));
   
 }

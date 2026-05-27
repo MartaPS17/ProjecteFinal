@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <header>
     <nav class="navbarPare" id="menuPrincipal">
       <h3>Menú</h3>
       <ul>
@@ -22,7 +23,7 @@
   <main>
 
     <section class="seccioTasca">
-      <form id="formTasca" action="#">
+      <form id="formTasca">
         <div class="seccioFormTitol">
           <h3>Crear nova tasca</h3>
         </div>
@@ -48,11 +49,20 @@
             <option value="Urgent">Urgent</option>
           </select>
 
-          <button type="submit" class="btnCrearTasca">Crear Tasca</button>
+
+          <input type="text" id="novaTasca">
+          <button type="submit" onclick="crearTasca()"  class="btnCrearTasca">Crear Tasca</button>
         </div>
       </form>
     </section>
   </main>
+
+  <template id="plantillaPreview">
+    <div class="previewCard">
+      <h3 class="previewTitol"></h3>
+      <p class="previewData"></p>
+    </div>
+  </template>
 
 </body>
 
