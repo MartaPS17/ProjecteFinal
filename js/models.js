@@ -1,4 +1,4 @@
-export function crearTasca(id, titol, descripcio, data, categoria, organitzacio, prioritat, categoriaNom, categoriaColor) {
+export function Tasca(id, titol, descripcio, data, categoria, organitzacio, prioritat, categoriaNom, categoriaColor) {
 
   this.id = id;
   this.titol = titol;
@@ -16,3 +16,4 @@ export function crearTasca(id, titol, descripcio, data, categoria, organitzacio,
 
   
 }
+

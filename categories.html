@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categories</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="img/png" href="favicon\favicon.ico">
 </head>
 
 <body>
   <header>
-    
+
     <nav class="navbarPare" id="menuPrincipal">
       <h3>Menú</h3>
       <ul>
@@ -19,27 +21,27 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    
-    <section class="sectionFormCategories">
-      <form  id="formCategories" action="#">
-        <label for="formCategories">Nova Categoria</label>
-        <input type="text" name="novaCategoria" placeholder="" >
+ <section class="sectionFormCategories">
+  <form id="formCategories">
+    <label for="nomCategoria">Nova Categoria</label>
+    <input type="text" id="nomCategoria" placeholder="Quina categoria és?" required>
 
-        <label for="colorCategories">Color de la categoria:</label>
-        <input type="color" name="colorCategoria" placeholder="">
+    <label for="colorCategoria">Color de la categoria:</label>
+    <input type="color" id="colorCategoria">
 
-        <button type="submit" name="btnAfegirCategoria" required>Afegir Categoria</button>
-      </form>
+    <button type="submit">Afegir Categoria</button>
+  </form>
+</section>
 
-      <section id="seccioCategoriaCreada"></section>
-
+      <section id="seccioCategoriaCreada">
+        <p>Categories creades: </p>
+      </section>
     </section>
 
-
-
-
   </main>
-  
+  <script type="module" src="js/categories.js"></script>
 </body>
+
 </html>
